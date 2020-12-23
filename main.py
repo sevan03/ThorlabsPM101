@@ -1,4 +1,5 @@
 import datetime as dt
+
 import matplotlib
 import matplotlib.pyplot as plt
 import netifaces
@@ -34,7 +35,7 @@ def animate(i, xs, ys, ys_mean):
     ax1.plot(xs, ys, 'b')
     ax2.plot(xs, ys_mean, 'r')
     b = inst.query("sens:corr:wav?")
-    Roma.sosi()
+
 
 if __name__ == '__main__':
     inst = pyvisa.ResourceManager().open_resource('USB0::4883::32886::M00554182::0::INSTR')
